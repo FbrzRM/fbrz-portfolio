@@ -1,0 +1,82 @@
+---
+import Blur from '../components/Blur.astro'
+---
+
+<header class="header">
+    <Blur></Blur>
+    <div class="nav-bar container">
+        <nav class="navigation">
+            <a class="navigation__link" href="#">Inicio</a>
+            <a class="navigation__link" href="#">Experiencia</a>
+            <a class="navigation__link" href="#">Sobre mi</a>
+            <a class="navigation__link" href="#">Contacto</a>
+        </nav>
+    </div>
+</header>
+
+<style>
+    .nav-bar{
+        position: relative;
+        z-index: 4;
+        background-color: var(--black);
+        margin-top: 0rem;
+        border-radius: 5rem;
+    }
+
+    .navigation{
+    }
+
+    @media (min-width: 768px) {
+        .navigation{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+    .navigation__link{
+        text-transform: uppercase;
+        display: block;
+        padding: 1.5rem 0;
+        text-align: center;
+        &:active{
+            background-color: var(--black);
+            box-shadow: 0rem 0rem 1rem .1rem var(--gray);
+            &:first-of-type{
+                border-radius: 5rem 5rem 0 0;
+            }
+            &:last-of-type{
+                border-radius: 0 0 5rem 5rem;
+            }
+        }
+    }
+
+    @media (min-width: 768px) {
+        .navigation__link{
+            padding: 1rem 5rem;
+            transition: background-color .3s;
+            border-radius: 5rem;
+            &:active{
+                border-radius: 5rem;
+                &:first-of-type{
+                    border-radius: 5rem;
+                }
+                &:last-of-type{
+                    border-radius: 5rem;
+                }
+            }
+        }
+    }
+
+    @media (hover:hover){
+        .navigation__link:hover{
+            border-radius: 5rem;
+            transform: scale(1.01);
+            background-color: var(--black);
+            box-shadow: 0rem 0rem 1rem .1rem var(--gray);
+        }
+    }
+
+
+
+</style>

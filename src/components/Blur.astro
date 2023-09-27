@@ -1,0 +1,67 @@
+---
+
+---
+<div class="blur-position">
+    <div class="blur-dark"></div>
+    <div class="blur-light"></div>
+    <div class="blur-hot"></div>
+</div>
+<style>
+    .blur-position{
+        position: relative;
+        padding-top: 2rem;
+    }
+    .blur-dark{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 4;
+        background-color:  #111827;
+        height: 35rem;
+        filter: blur(10rem);
+        opacity: 75%;
+    }
+
+
+    .blur-light{
+        position: absolute;
+        background: rgba(255 202 104);
+        z-index: 3;
+        height: 25rem;
+        width: 14.5rem;
+        filter: blur(10rem);
+        top: -1.6rem;
+        left: -8rem;
+        border-radius: 50rem;
+    }
+
+    @media (min-width: 768px) {
+        .blur-light{
+            height: 25rem;
+            width: 55rem;
+        }
+    }
+
+    .blur-hot{
+        position: absolute;
+        z-index: 2;
+        border-radius: 50rem;
+        top: 0.6rem;
+        right: 0.5rem;
+        background: rgba(224 87 46);
+        height: 45rem;
+        width: 85rem;
+        filter: blur(10rem);
+        opacity: 35%;
+    }
+
+    @media (min-width: 768px) {
+        .blur-hot{
+            top: -9.6rem;
+            right: 60rem;
+            height: 45rem;
+            width: 85rem;
+        }
+    }
+</style>

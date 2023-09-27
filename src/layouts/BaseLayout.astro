@@ -1,0 +1,149 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props{
+    title: string;
+    description : string;
+}
+
+const {title, description} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions/>
+		<title>{title}</title>
+		<!-- Normalize -->
+		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+		<!-- fonts -->
+		<!-- CSS -->
+		<meta name="description" content={description}>
+	</head>
+	<body>
+		<Header></Header>
+		<slot />
+		<Footer></Footer>
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		/* Colors */
+		--white: #ffffff;
+		--black: #0006;
+		--gray: #fff2;
+		--bg-color: #171c33;
+
+		/* Font */
+		--font-heading: system-ui, sans-serif;
+		--font-text: monospace;
+		--font-size-h4: clamp(0.77rem, 0.74vw + 0.59rem, 1.18rem);
+		--font-size-h3: clamp(1.25rem, 1.2vw + 0.95rem, 1.91rem);
+		--font-size-h2: clamp(2.02rem, 1.95vw + 1.54rem, 3.09rem);
+		--font-size-h1: clamp(3.27rem, 3.15vw + 2.49rem, 5rem);
+	}
+	html {
+		box-sizing: border-box;
+		font-size: 62.5%;
+		color-scheme: dark light;
+	}
+
+	*, *::before, *::after{
+		box-sizing: inherit;
+	}
+
+	body{
+		font-size: 1.6rem;
+		font-family: var(--font-text);
+		background-color: var(--bg-color);
+		background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+	}
+
+	h1{
+		font-size: var(--font-size-h1);
+	}
+
+	h2{
+		font-size: var(--font-size-h2);
+	}
+
+	h3{
+		font-size: var(--font-size-h3);
+	}
+
+	h1, h2{
+		font-family: var(--font-heading);
+		color: var(--white);
+		text-align: center;
+	}
+
+	h3{
+		margin: .5rem 0;
+	}
+
+	a{
+		font-size: clamp(1.56rem, 1.7vw + 1.14rem, 2.5rem);
+		color: var(--white);
+		text-decoration: none;
+	}
+
+	p{
+		font-size: clamp(1.6rem, 1.64vw + 1.19rem, 2.5rem);
+	}
+
+	@media (min-width: 768px) {
+		p{
+			line-height: 1.2;
+		}
+	}
+
+
+	img{
+		max-width: 100%;
+		display: block;
+	}
+
+	.container{
+		width: min(90%, 160rem);
+		margin: 0 auto;
+	}
+
+	/* Animaciones */
+	.svg {
+    animation: floatAndRotate 8s linear infinite, blink 3s ease-in-out infinite;
+    transform-origin: center;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    }
+
+    @keyframes floatAndRotate {
+        0% {
+            transform: translateY(-5px) rotate(0deg);
+        }
+        50% {
+            transform: translateY(5px) rotate(180deg);
+        }
+        100% {
+            transform: translateY(-5px) rotate(360deg);
+        }
+    }
+
+    @keyframes blink {
+        0% {
+            opacity: 0.5;
+        }
+        50% {
+            opacity: 0.2;
+        }
+        100% {
+            opacity: 0.5;
+        }
+    }
+
+</style>

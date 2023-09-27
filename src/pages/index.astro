@@ -1,16 +1,107 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Experience from '../components/Experience.astro';
 
+const title = "Fbrz";
+const description = "Fbrz";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={title} description={description}>
+<main>
+    <div class="container">
+        <section class="profile">
+            <div class="profile__image">
+                <img src="/public/user.png" alt="Fabrizio Ramos Mesías, ingeniero de software">
+            </div>
+            <div>
+                <h1>FbrzEulb</h1>
+                <p>Desarrollador web. Enfocado en mejorar la experiencia de usuario y optimización en motores de búsqueda (SEO)</p>
+                <p>Mi habilidad de aprendizaje rápido y mi naturaleza autodirigida me permiten integrarme sin problemas en nuevos flujos de trabajo y marcos de trabajo.</p>
+                <p>Mi habilidad de aprendizaje rápido y mi naturaleza autodirigida me permiten integrarme sin problemas en nuevos flujos de trabajo y marcos de trabajo.</p>
+                <p>Mi habilidad de aprendizaje rápido y mi naturaleza autodirigida me permiten integrarme sin problemas en nuevos flujos de trabajo y marcos de trabajo.</p>
+        </section>
+
+        <div class="information">
+            <p class="information__text">23</p>
+            <p class="information__text">Gye-Ecuador</p>
+            <p class="information__text">Software engineer</p>
+            <p class="information__text"><span></span> OpenToWork</p>
+        </di>
+    </div>
+</main>
+
+<Experience></Experience>
+</BaseLayout>
+
+<style>
+    main{
+        position: relative;
+        z-index: 4;
+    }
+
+    .profile{
+        background-color: var(--black);
+        margin-top: 1rem;
+        border-radius: 5rem;
+        padding: 5rem;
+    }
+
+    @media (min-width: 768px) {
+        .profile{
+            margin-top: 5rem;
+        }
+    }
+
+    .profile{
+        display: flex;
+        flex-direction: column;
+    }
+    @media (min-width: 768px) {
+        .profile{
+            flex-direction: row-reverse;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .profile__image{
+            flex-basis: 50rem;
+
+        }
+    }
+
+    .information{
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: wrap-reverse;
+        gap: .1rem;
+
+    }
+
+    @media (min-width: 768px) {
+        .information{
+            flex-direction: row;
+            justify-content: end;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+    }
+
+    .information__text{
+        background-color: var(--black);
+        border-radius: 5rem;
+
+        padding: .5rem 2rem;
+        position: relative;
+        margin: .5rem 0 0 0;
+        & span{
+            display: inline-block;
+            width: 1rem;
+            height: 1rem;
+            background-color: #00ff00;
+            border-radius: 1rem;
+        }
+    }
+
+</style>
+
+
