@@ -116,33 +116,75 @@ const {title, description} = Astro.props;
 	}
 
 	/* Animaciones */
-	.svg {
-    animation: floatAndRotate 8s linear infinite, blink 3s ease-in-out infinite;
-    transform-origin: center;
-    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+	.flotate {
+		animation: float 8s linear infinite, blink 3s ease-in-out infinite;
+		transform-origin: center;
     }
 
-    @keyframes floatAndRotate {
+	.float{
+		animation: float 8s linear infinite;
+	}
+
+	.rotateBlink{
+		animation: float 8s linear infinite, blink 3s ease-in-out infinite, rotateY 8s linear infinite;
+		filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+	}
+
+	.rotateX{
+		animation: rotateX 9s linear infinite;
+	}
+
+    @keyframes float {
         0% {
-            transform: translateY(-5px) rotate(0deg);
+            transform: translateY(-1.5rem);
         }
         50% {
-            transform: translateY(5px) rotate(180deg);
+            transform: translateY(1.5rem);
         }
         100% {
-            transform: translateY(-5px) rotate(360deg);
+            transform: translateY(-1.5rem);
         }
     }
+
+	@keyframes rotateY {
+        0% {
+            transform: rotate(0deg) translateY(-1rem);
+        }
+        50% {
+            transform: rotate(180deg) translateY(1rem);
+        }
+        100% {
+            transform: rotate(360deg) translateY(-1rem);
+        }
+    }
+
+	@keyframes rotateX {
+		0% {
+            transform: rotate(0deg) translateY(-.5rem);
+        }
+        25% {
+            transform: rotate(10deg) translateY(0rem);
+        }
+        50% {
+            transform: rotate(0deg) translateY(1rem);
+        }
+        75% {
+            transform: rotate(-25deg) translateY(0rem);
+        }
+		100%{
+			transform: rotate(0deg) translateY(-.5rem);
+		}
+	}
 
     @keyframes blink {
         0% {
-            opacity: 0.5;
+            opacity: 0.8;
         }
         50% {
-            opacity: 0.2;
+            opacity: 0.4;
         }
         100% {
-            opacity: 0.5;
+            opacity: 0.8;
         }
     }
 

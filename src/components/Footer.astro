@@ -1,9 +1,9 @@
 ---
-
+import Rocket from "./svg/Rocket.astro";
 ---
 <div class="rocket">
     <a href="">
-        <img class="rocket__image" src="public/rocket.svg" alt="rocket">
+        <Rocket class="rocket__image"></Rocket>
     </a>
 </div>
 <footer class="footer">
@@ -14,12 +14,9 @@
     .rocket{
         display: flex;
         justify-content: end;
-        margin-right: 1rem;
+        margin-right: 2rem;
     }
-    .rocket__image{
-        transform: rotate(-45deg);
-        display: inline-block;
-    }
+
     .footer{
         margin-top: 1rem;
         background-color: var(--black);
