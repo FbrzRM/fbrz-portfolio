@@ -1,16 +1,27 @@
 ---
 import Blur from '../components/Blur.astro'
+import Astronaut from './svg/Astronaut.astro';
 ---
 
 <header class="header">
     <Blur></Blur>
-    <div class="nav-bar container">
-        <nav class="navigation">
-            <a class="navigation__link" href="#">Inicio</a>
-            <a class="navigation__link" href="#">Experiencia</a>
-            <a class="navigation__link" href="#">Sobre mi</a>
-            <a class="navigation__link" href="#">Contacto</a>
-        </nav>
+    <div class="container">
+        <div class="content">
+            <a href="/" class="title">
+                <h2>Fbrz.</h2>
+            </a>
+            <div class="nav-bar">
+                <nav class="navigation">
+                    <a class="navigation__link" href="#">Inicio</a>
+                    <a class="navigation__link" href="#">Experiencia</a>
+                    <a class="navigation__link" href="#">Sobre mi</a>
+                    <a class="navigation__link" href="#">Contacto</a>
+                </nav>
+            </div>
+            <div class="astronaut">
+                <Astronaut></Astronaut>
+            </div>
+        </div>
     </div>
 </header>
 
@@ -19,11 +30,49 @@ import Blur from '../components/Blur.astro'
         position: relative;
         z-index: 4;
         background-color: var(--black);
-        margin-top: 0rem;
         border-radius: 5rem;
     }
 
-    .navigation{
+    .content{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+
+        .title{
+            grid-column: 1 / 2;
+            position: relative;
+            z-index: 4;
+            display: flex;
+            align-items: center;
+            & h2{
+                font-size: 5rem;
+                margin: 0;
+            }
+        }
+
+        .nav-bar{
+            grid-row: 2 / 3;
+            grid-column: 1 / 6;
+            margin-top: 1rem;
+        }
+        .astronaut{
+            grid-column: 5 / 6;
+            position: relative;
+            z-index: 5;
+        }
+    }
+
+
+    @media (min-width: 1200px) {
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5rem;
+
+            & .nav-bar{
+                flex: 1;
+            }
+        }
     }
 
     @media (min-width: 768px) {
@@ -53,7 +102,7 @@ import Blur from '../components/Blur.astro'
 
     @media (min-width: 768px) {
         .navigation__link{
-            padding: 1rem 5rem;
+            padding: 2rem 5rem;
             transition: background-color .3s;
             border-radius: 5rem;
             &:active{

@@ -1,115 +1,42 @@
 ---
-import SpaceStation from './svg/SpaceStation.astro';
-import Rock from './svg/Rock.astro';
-import FlyingSaucer from './svg/FlyingSaucer.astro';
-
+import Atom from './svg/Atom.astro';
+import StarD from './svg/StarD.astro';
+import Obsidian from '../components/svg/Obsidian.astro';
+import InfoCard from './InfoCard.astro';
+const place : string="";
+const position : string="";
+const date : string="";
+const activities : string[]=[];
 ---
 
 <section class="container experience">
     <h2>Courses</h2>
     <div class="experience__grid">
-        <article class="experience__content">
-            <h3>Lugar</h3>
-            <div class="time">
-                <p>Cargo</p>
-                <p>fecha</p>
-            </div>
-            <ul>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-            </ul>
-        </article>
+        <InfoCard place={place} position={position} date={date} activities={activities}></InfoCard>
         <div class="experience__animate">
             <span class="experience__line"></span>
-            <SpaceStation></SpaceStation>
+            <StarD></StarD>
             <span class="experience__line"></span>
         </div>
-        <article class="experience__content">
-            <h3>Lugar</h3>
-            <div class="time">
-                <p>Cargo</p>
-                <p>fecha</p>
-            </div>
-            <ul>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-            </ul>
-        </article>
-        <article class="experience__content">
-            <h3>Lugar</h3>
-            <div class="time">
-                <p>Cargo</p>
-                <p>fecha</p>
-            </div>
-
-            <ul>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-            </ul>
-        </article>
+        <InfoCard place={place} position={position} date={date} activities={activities}></InfoCard>
+        <InfoCard place={place} position={position} date={date} activities={activities}></InfoCard>
         <div class="experience__animate">
             <span class="experience__line"></span>
-            <FlyingSaucer></FlyingSaucer>
+            <Obsidian></Obsidian>
             <span class="experience__line"></span>
         </div>
-        <article class="experience__content">
-            <h3>Lugar</h3>
-            <div class="time">
-                <p>Cargo</p>
-                <p>fecha</p>
-            </div>
-            <ul>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-            </ul>
-        </article>
-        <article class="experience__content">
-            <h3>Lugar</h3>
-            <div class="time">
-                <p>Cargo</p>
-                <p>fecha</p>
-            </div>
-            <ul>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-            </ul>
-        </article>
+        <InfoCard place={place} position={position} date={date} activities={activities}></InfoCard>
+        <InfoCard place={place} position={position} date={date} activities={activities}></InfoCard>
         <div class="experience__animate">
             <span class="experience__line"></span>
-            <Rock></Rock>
+            <Atom></Atom>
             <span class="experience__line"></span>
         </div>
-        <article class="experience__content">
-            <h3>Lugar</h3>
-            <div class="time">
-                <p>Cargo</p>
-                <p>fecha</p>
-            </div>
-            <ul>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-                <li>mi experiencia</li>
-            </ul>
-        </article>
+        <InfoCard place={place} position={position} date={date} activities={activities}></InfoCard>
     </div>
 </section>
 
 <style>
-    .experience{
-        margin-top: 5rem;
-    }
-
     .experience__grid{
         display: grid;
         grid-template-columns: 1fr;
@@ -145,47 +72,7 @@ import FlyingSaucer from './svg/FlyingSaucer.astro';
 
     @media (min-width: 768px) {
         .experience__line{
-            height: 7.6rem;
+            height: 9rem;
         }
     }
-
-    .time{
-        display: flex;
-        gap: 2rem;
-        & p{
-            font-size: 1.2rem;
-            margin: 0;
-        }
-    }
-
-    .experience__content{
-        background-color: var(--black);
-        border-radius: 2rem;
-        padding: 1rem 2rem;
-    }
-
-    @media (min-width: 768px) {
-        .experience__content:nth-child(1){
-            margin-top: -7rem;
-        }
-        .experience__content:nth-child(3){
-            margin-top: 8rem;
-        }
-
-        .experience__content:nth-child(4){
-            margin-top: -7rem;
-        }
-        .experience__content:nth-child(6){
-            margin-top: 8rem;
-        }
-
-        .experience__content:nth-child(7){
-            margin-top: -8rem;
-        }
-        .experience__content:nth-child(9){
-            margin-top: 8rem;
-        }
-    }
-
-
 </style>
