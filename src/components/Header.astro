@@ -3,7 +3,7 @@ import Blur from '../components/Blur.astro'
 import Astronaut from './svg/Astronaut.astro';
 ---
 
-<header class="header">
+<header class="header" id="home">
     <Blur></Blur>
     <div class="container">
         <div class="content">
@@ -12,10 +12,9 @@ import Astronaut from './svg/Astronaut.astro';
             </a>
             <div class="nav-bar">
                 <nav class="navigation">
-                    <a class="navigation__link" href="#">Inicio</a>
-                    <a class="navigation__link" href="#">Experiencia</a>
-                    <a class="navigation__link" href="#">Sobre mi</a>
-                    <a class="navigation__link" href="#">Contacto</a>
+                    <a class="navigation__link" href="#experience">Experiencia</a>
+                    <a class="navigation__link" href="#skills">Skills</a>
+                    <a class="navigation__link" href="#courses">Cursos</a>
                 </nav>
             </div>
             <div class="astronaut">
