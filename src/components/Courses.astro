@@ -2,77 +2,271 @@
 import Atom from './svg/Atom.astro';
 import StarD from './svg/StarD.astro';
 import Obsidian from '../components/svg/Obsidian.astro';
-import InfoCard from './InfoCard.astro';
-const place : string="";
-const position : string="";
-const date : string="";
-const activities : string[]=[];
+
+import Documentwithtext from './svg/documentwithtext.astro';
 ---
 
-<section class="container experience" id="courses">
-    <h2>Courses</h2>
-    <div class="experience__grid">
-        <InfoCard place={place} position={position} date={date} activities={activities}></InfoCard>
-        <div class="experience__animate">
-            <span class="experience__line"></span>
+<section class="container" id="courses">
+    <h2 class="uppercase">Cursos</h2>
+
+    <div class="timeline">
+        <article class="article">
+            <div class="checkpoint">
+                <header class="info">
+                    <h3>Git + GitHub: </h3>
+                    <a href="#" class="platform">
+                        <span>Plataforma</span>
+                        <Documentwithtext></Documentwithtext>
+                    </a>
+                </header>
+                <ul>
+                    <li>Todo un sistema de control de versiones de cero.</li>
+                </ul>
+            </div>
+        </article>
+        <div class="line"></div>
+        <article class="article">
+            <div class="checkpoint">
+                <header class="info">
+                    <h3>CSS</h3>
+                    <a href="#" class="platform">
+                        <span>Plataforma</span>
+                        <Documentwithtext></Documentwithtext>
+                    </a>
+                </header>
+                <ul>
+                    <li>Flexbox, CSS Grid, Custom Properties, SASS, Mixins, Gulp Workflows, Animaciones, RWD</li>
+                </ul>
+            </div>
+        </article>
+        <div class="line"></div>
+        <article class="article">
+            <div class="checkpoint">
+                <header class="info">
+                    <h3>JavaScript (ECMAScript 2021)</h3>
+                    <a href="#" class="platform">
+                        <span>Plataforma</span>
+                        <Documentwithtext></Documentwithtext>
+                    </a>
+                </header>
+                <ul>
+                    <li>Webpack, Clases, Propiedades privadas, ESNext, Node, Npm, Babel, Hot Reaload, CRUD, Carga de archivos.</li>
+                </ul>
+            </div>
+        </article>
+        <div class="line"></div>
+        <article class="article">
+            <div class="checkpoint">
+                <header class="info">
+                    <h3>Angular</h3>
+                    <a href="#" class="platform">
+                        <span>Plataforma</span>
+                        <Documentwithtext></Documentwithtext>
+                    </a>
+                </header>
+                <ul>
+                    <li>Signals, componentes, directivas, servicios, mapas, JWT, autenticación y despliegues</li>
+                    <li>Router, modulos, Formularios reactivos</li>
+                </ul>
+            </div>
+        </article>
+        <div class="line"></div>
+        <article class="article">
+            <div class="checkpoint">
+                <header class="info">
+                    <h3>Curso</h3>
+                    <a href="#" class="platform">
+                        <span>Plataforma</span>
+                        <Documentwithtext></Documentwithtext>
+                    </a>
+                </header>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </div>
+        </article>
+        <div class="line"></div>
+        <article class="article">
+            <div class="checkpoint">
+                <header class="info">
+                    <h3>Curso</h3>
+                    <a href="#" class="platform">
+                        <span>Plataforma</span>
+                        <Documentwithtext></Documentwithtext>
+                    </a>
+                </header>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </div>
+        </article>
+        <div class="line"></div>
+        <article class="article">
+            <div class="checkpoint">
+                <header class="info">
+                    <h3>Curso</h3>
+                    <a href="#" class="platform">
+                        <span>Plataforma</span>
+                        <Documentwithtext></Documentwithtext>
+                    </a>
+                </header>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </div>
+        </article>
+        <div class="line"></div>
+        <article class="article">
+            <div class="checkpoint">
+                <header class="info">
+                    <h3>Curso</h3>
+                    <a href="#" class="platform">
+                        <span>Plataforma</span>
+                        <Documentwithtext></Documentwithtext>
+                    </a>
+                </header>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                    <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
+                </ul>
+            </div>
+        </article>
+        <div class="line"></div>
+        <div class="icon">
             <StarD></StarD>
-            <span class="experience__line"></span>
         </div>
-        <InfoCard place={place} position={position} date={date} activities={activities}></InfoCard>
-        <InfoCard place={place} position={position} date={date} activities={activities}></InfoCard>
-        <div class="experience__animate">
-            <span class="experience__line"></span>
+        <div class="icon">
             <Obsidian></Obsidian>
-            <span class="experience__line"></span>
         </div>
-        <InfoCard place={place} position={position} date={date} activities={activities}></InfoCard>
-        <InfoCard place={place} position={position} date={date} activities={activities}></InfoCard>
-        <div class="experience__animate">
-            <span class="experience__line"></span>
+        <div class="icon">
             <Atom></Atom>
-            <span class="experience__line"></span>
         </div>
-        <InfoCard place={place} position={position} date={date} activities={activities}></InfoCard>
+
     </div>
 </section>
-
 <style>
-    .experience__grid{
-        display: grid;
-        grid-template-columns: 1fr;
+    .info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .subtitle{
+        font-size: 1.5rem;
+        margin: 0.2rem 0;
+        color: #fff9
+    }
+    .platform{
+        display: flex;
+        align-items: center;
         gap: 1rem;
+        font-size: 1.5rem;
     }
 
-    @media (min-width: 768px) {
-        .experience__grid{
-            gap: 0;
-            grid-template-columns: 5fr 1fr 5fr;
-            align-items: center;
+    @media(hover:hover){
+        .platform:hover{
+            text-decoration: underline;
         }
     }
 
-    .experience__animate{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .timeline{
+        display: grid;
+        grid-template-columns: 1fr;
     }
-
-    .experience__icon{
-        margin: 0 auto;
-        width: min(10rem);
-    }
-
-    .experience__line{
-        display: block;
-        margin: 0 auto;
-        height: 2rem;
-        width: .1rem;
+    .line{
+        height: 5rem;
         background-color: #fff;
+        width: .2rem;
+        margin: 0 auto;
+    }
+    .line::before{
+        content: "";
+        width: 1.5rem;
+        height: 1.5rem;
+        display: block;
+        background-color: #fff;
+        border-radius: 1rem;
+        position: relative;
+        top: 35%;
+        left: -.7rem;
+    }
+    .checkpoint{
+        background-color: var(--black);
+        padding: 1rem 1.5rem;
+        border-radius: 1.4rem;
     }
 
-    @media (min-width: 768px) {
-        .experience__line{
-            height: 9rem;
+    .icon, .line:nth-child(16){
+        display: none;
+    }
+
+    @media (min-width: 768px){
+        .timeline{
+            display: grid;
+            grid-template-columns: 48% 4% 48%;
+        }
+
+        .article{
+            grid-column: 1 / 2;
+        }
+        .line{
+            grid-column: 2 / 3;
+            height: auto;
+        }
+        .article:nth-child(3){
+            grid-column: 3 / 4;
+            grid-row: 2 / 3;
+        }
+        .article:nth-child(5){
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+        }
+        .article:nth-child(7){
+            grid-column: 3 / 4;
+            grid-row: 4 / 5;
+        }
+        .article:nth-child(11){
+            grid-column: 3 / 4;
+            grid-row: 6 / 7;
+        }
+        .article:nth-child(15){
+            grid-column: 3 / 4;
+            grid-row: 8 / 9;
+        }
+        .icon{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .line:nth-child(2){
+            display: flex;
+            flex-direction: column;
+            align-self: end;
+            height: 15rem;
+            &::before{
+                top: 0;
+            }
+        }
+        .line:nth-child(16){
+            grid-row: 8 / 9;
+            height: 8rem;
+            display: block;
+            &::before{
+                top: 100%;
+            }
+        }
+        .icon:nth-child(17){
+            grid-row: 1 / 2;
+            grid-column: 3 / 4;
+        }
+        .icon:nth-child(18){
+            grid-row: 4 / 5;
+        }
+        .icon:nth-child(19){
+            grid-row: 7 / 8;
+            grid-column: 3 / 4;
         }
     }
 </style>
