@@ -21,7 +21,7 @@ const {title, description} = Astro.props;
 		<ViewTransitions/>
 		<title>{title}</title>
 		<!-- Normalize -->
-		<link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+		<link rel="stylesheet" href="/public/styles/normalize.css">
 		<!-- fonts -->
 		<!-- CSS -->
 		<meta name="description" content={description}>
@@ -120,7 +120,9 @@ const {title, description} = Astro.props;
 
 	ul{
 		margin: 0;
-		padding: 0 3rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
 	}
 
 	.container{

@@ -149,6 +149,9 @@ import FlyingSaucer from './svg/FlyingSaucer.astro';
     </div>
 </section>
 <style>
+    .title{
+        margin: 0;
+    }
     .info{
         display: flex;
         gap: 2rem;
@@ -182,8 +185,11 @@ import FlyingSaucer from './svg/FlyingSaucer.astro';
     }
     .checkpoint{
         background-color: var(--black);
-        padding: 1rem 1.5rem;
+        padding: 1.5rem;
         border-radius: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     .icon, .line:nth-child(16){

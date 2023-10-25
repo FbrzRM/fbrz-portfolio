@@ -13,7 +13,7 @@ import Documentwithtext from './svg/documentwithtext.astro';
         <article class="article">
             <div class="checkpoint">
                 <header class="info">
-                    <h3>Git + GitHub: </h3>
+                    <h3 class="title">Git + GitHub: </h3>
                     <a href="#" class="platform">
                         <span>Plataforma</span>
                         <Documentwithtext></Documentwithtext>
@@ -28,7 +28,7 @@ import Documentwithtext from './svg/documentwithtext.astro';
         <article class="article">
             <div class="checkpoint">
                 <header class="info">
-                    <h3>CSS</h3>
+                    <h3 class="title">CSS</h3>
                     <a href="#" class="platform">
                         <span>Plataforma</span>
                         <Documentwithtext></Documentwithtext>
@@ -43,7 +43,7 @@ import Documentwithtext from './svg/documentwithtext.astro';
         <article class="article">
             <div class="checkpoint">
                 <header class="info">
-                    <h3>JavaScript (ECMAScript 2021)</h3>
+                    <h3 class="title">JavaScript (ECMAScript 2021)</h3>
                     <a href="#" class="platform">
                         <span>Plataforma</span>
                         <Documentwithtext></Documentwithtext>
@@ -58,7 +58,7 @@ import Documentwithtext from './svg/documentwithtext.astro';
         <article class="article">
             <div class="checkpoint">
                 <header class="info">
-                    <h3>Angular</h3>
+                    <h3 class="title">Angular</h3>
                     <a href="#" class="platform">
                         <span>Plataforma</span>
                         <Documentwithtext></Documentwithtext>
@@ -74,7 +74,7 @@ import Documentwithtext from './svg/documentwithtext.astro';
         <article class="article">
             <div class="checkpoint">
                 <header class="info">
-                    <h3>Curso</h3>
+                    <h3 class="title">Curso</h3>
                     <a href="#" class="platform">
                         <span>Plataforma</span>
                         <Documentwithtext></Documentwithtext>
@@ -90,7 +90,7 @@ import Documentwithtext from './svg/documentwithtext.astro';
         <article class="article">
             <div class="checkpoint">
                 <header class="info">
-                    <h3>Curso</h3>
+                    <h3 class="title">Curso</h3>
                     <a href="#" class="platform">
                         <span>Plataforma</span>
                         <Documentwithtext></Documentwithtext>
@@ -106,7 +106,7 @@ import Documentwithtext from './svg/documentwithtext.astro';
         <article class="article">
             <div class="checkpoint">
                 <header class="info">
-                    <h3>Curso</h3>
+                    <h3 class="title">Curso</h3>
                     <a href="#" class="platform">
                         <span>Plataforma</span>
                         <Documentwithtext></Documentwithtext>
@@ -122,7 +122,7 @@ import Documentwithtext from './svg/documentwithtext.astro';
         <article class="article">
             <div class="checkpoint">
                 <header class="info">
-                    <h3>Curso</h3>
+                    <h3 class="title">Curso</h3>
                     <a href="#" class="platform">
                         <span>Plataforma</span>
                         <Documentwithtext></Documentwithtext>
@@ -148,6 +148,9 @@ import Documentwithtext from './svg/documentwithtext.astro';
     </div>
 </section>
 <style>
+    .title{
+        margin: 0;
+    }
     .info{
         display: flex;
         justify-content: space-between;
@@ -194,8 +197,11 @@ import Documentwithtext from './svg/documentwithtext.astro';
     }
     .checkpoint{
         background-color: var(--black);
-        padding: 1rem 1.5rem;
+        padding: 1.5rem;
         border-radius: 1.4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
     .icon, .line:nth-child(16){

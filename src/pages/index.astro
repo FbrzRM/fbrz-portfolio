@@ -13,8 +13,8 @@ const description = "Fbrz";
     <div class="container">
         <section class="profile">
             <div class="profile__image">
-                <div class="profile__author">
-                    <img src="user.png" alt="Fabrizio Ramos Mesías, ingeniero de software">
+                <div>
+                    <img class="profile__author" src="user.png" alt="Fabrizio Ramos Mesías, ingeniero de software">
                 </div>
                 <div class="redes-sociales">
                     <a href="https://github.com/FbrzRM" target="_blank">
@@ -40,7 +40,8 @@ const description = "Fbrz";
                 <p class="about-me__text">Mi capacidad para aprender rápido, organizarme eficazmente y encontrar soluciones creativas me ha ayudado a sobresalir.</p>
                 <p class="about-me__text">Siempre me mantengo actualizado y busco las mejores prácticas en el desarrollo Frontend, con el objetivo de mantener el código legible y entendible para los demás</p>
                 <p class="about-me__text"> Estoy entusiasmado por contribuir al éxito de su equipo y compartir mis conocimientos con mis colegas.</p>
-            </section>
+            </div>
+        </section>
 
         <div class="information">
             <p class="information__text">23 años</p>
@@ -71,11 +72,8 @@ const description = "Fbrz";
         color : var(--primary)
     }
 
-
-
     .redes-sociales{
         display: flex;
-        flex-direction: column-reverse;
         justify-content: space-evenly;
     }
 
@@ -85,6 +83,7 @@ const description = "Fbrz";
 
     .profile__image{
         display: flex;
+        flex-direction: column;
         gap: 1rem;
     }
 
@@ -107,10 +106,7 @@ const description = "Fbrz";
         }
 
         .about-me{
-            flex-basis: 650rem;
-        }
-        .profile__image{
-            flex-direction: column;
+            flex-basis: 700rem;
         }
     }
 
@@ -118,15 +114,15 @@ const description = "Fbrz";
         display: flex;
         flex-direction: row-reverse;
         flex-wrap: wrap-reverse;
-        gap: .1rem;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
     }
 
     @media (min-width: 768px) {
         .information{
             flex-direction: row;
-            justify-content: end;
-            gap: 1rem;
-            margin-top: 1.5rem;
             margin-bottom: 8rem;
         }
         .redes-sociales{
